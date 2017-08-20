@@ -16,7 +16,7 @@
 </head>
 <body>
 <%
-		String id = request.getParameter("id1");
+		String id = request.getParameter("id1");//getParameter의 return type은 무조건 String
 		String pwd = request.getParameter("pwd1");
 		String dbUrl = "jdbc:mysql://localhost:3306/jspstudy";
 		String dbId="root";
@@ -31,7 +31,7 @@
 		 String sql="select * from user where id=?";
 		 ps = con.prepareStatement(sql);
 		 ps.setString(1, id);
-		 ResultSet rs = ps.executeQuery();
+		 ResultSet rs = ps.executeQuery();//select만 executeQuery()를 쓰고 나머지는 executeUpdate()를 쓴다.
 		 out.println("<table border=1>");
 		 while(rs.next()) {
 			if (pwd.equals(rs.getString("password"))){
