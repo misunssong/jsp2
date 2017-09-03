@@ -38,7 +38,7 @@
 		</tr>
 		<tr>
 			<td colspan="1" align="center">
-				<input type="submit" value="로그인" >
+				<input type="submit" value="회원가입" >
 			</td>
 		</tr>			
 		</table>
